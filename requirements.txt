@@ -8,6 +8,7 @@ faiss-cpu
 sentence-transformers
 transformers
 huggingface-hub
+langchain-huggingface
 
 notebook
 ipykernel
