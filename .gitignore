@@ -23,14 +23,6 @@ env/
 *.ipynb_checkpoints
 
 # ================================
-# Vector Databases / Indexes
-# ================================
-indexes/
-faiss_indexes/
-*.faiss
-*.index
-
-# ================================
 # Environment & Secrets
 # ================================
 .env
@@ -51,8 +43,3 @@ logs/
 *.log
 tmp/
 temp/
-
-# ================================
-# Data (Raw PDFs)
-# ================================
-data/
