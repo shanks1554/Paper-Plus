@@ -10,5 +10,8 @@ transformers
 huggingface-hub
 langchain-huggingface
 
+fastapi
+uvicorn
+
 notebook
 ipykernel
