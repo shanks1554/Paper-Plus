@@ -112,21 +112,25 @@ Paper Plus
 git clone <repo-url>
 cd Paper-Plus
 ```
+### 2️⃣ Create a .env in root directory with following content:
 
-### 2️⃣ Create a virtual environment
+```bash
+HF_TOKEN = Your Hugging Face API Key
+```
+
+### 3️⃣ Create a virtual environment
 ```bash
 python -m venv .venv
 source .venv/bin/activate # Linux / Mac
 .venv\Scripts\activate # Windows
 ```
 
-
-### 3️⃣ Install dependencies
+### 4️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run FastAPI backend
+### 5️⃣ Run FastAPI backend
 ```bash
 uvicorn api.main:app --reload
 ```
@@ -135,7 +139,7 @@ Docs available at:
 http://127.0.0.1:8000/docs
 ```
 
-### 5️⃣ Run Flask frontend
+### 6️⃣ Run Flask frontend
 
 ```bash
 python frontend/app.py
