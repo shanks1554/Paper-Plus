@@ -92,15 +92,17 @@ Provides 3 APIs:
 
 ## 🗂 Project Structure  
 
-Paper Plus<br>
-├── RAG_system/ ← Vector DB + Retrieval + QA<br>
-├── research_paper_suggestion_system/<br>
-├── api/ ← FastAPI routes + schemas<br>
-├── frontend/ ← Flask + Templates + CSS<br>
-├── data/ ← Research PDFs per domain<br>
-├── indexes/ ← FAISS + metadata per domain<br>
+```bash
+Paper Plus
+├── RAG_system/ ← Vector DB + Retrieval + QA
+├── research_paper_suggestion_system/
+├── research_paper_improver_system/
+├── api/ ← FastAPI routes + schemas
+├── frontend/ ← Flask + Templates + CSS
+├── data/ ← Research PDFs per domain
+├── indexes/ ← FAISS + metadata per domain
 └── requirements.txt
-
+```
 ---
 
 ## ⚙️ Setup Instructions 
