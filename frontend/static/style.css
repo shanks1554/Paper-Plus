@@ -52,8 +52,8 @@ nav a:hover {
 }
 
 .nav-logo {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 100px;
     margin-right: 14px;
     display: flex;
     align-items: center;
