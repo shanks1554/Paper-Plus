@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Research Q&A</h2>
+
+<form method="POST">
+    <input type="text" name="question" placeholder="Ask a question..." required>
+
+    <select name="domain" required>
+        <option value="medical">Medical</option>
+        <option value="artificial_intelligence">Artificial Intelligence</option>
+        <option value="automobile">Automobile</option>
+        <option value="business">Business</option>
+        <option value="climate">Climate</option>
+        <option value="cyber_security">Cyber Security</option>
+        <option value="psychology">Psychology</option>
+    </select>
+
+    <button type="submit">Ask</button>
+</form>
+
+{% if answer %}
+<div class="result-card">
+    <h3>Answer</h3>
+    <p class="result-text">{{ answer }}</p>
+</div>
+{% endif %}
+
+{% if sources %}
+<h3>Sources</h3>
+<ul>
+{% for s in sources %}
+    <li>
+        <div class="result-card">
+            <div class="result-title">{{ s.source }}</div>
+            <p class="result-text">{{ s.content }}</p>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}

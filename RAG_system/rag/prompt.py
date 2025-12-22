@@ -1,10 +1,16 @@
 from langchain_core.prompts import PromptTemplate
 
 CUSTOM_PROMPT_TEMPLATE = """
-Use the pieces of information provided in the context to answer the user's question.
-If you do not know the answer, say that you do not know.
-Do not make up an answer.
-Do not use information outside the given context.
+You are a research assistant answering questions using the source documents provided.
+
+Use the context chunks below to produce a meaningful answer.
+If context does not contain exact matching sentences, summarize patterns across the chunks.
+If context suggests partial information, infer a supported conclusion.
+
+Rules:
+- Do NOT say "I don't know" unless no relevant context exists at all.
+- Do NOT invent facts unrelated to the context.
+- Cite concepts if present.
 
 Context:
 {context}
@@ -12,7 +18,7 @@ Context:
 Question:
 {question}
 
-Answer directly. No small talk.
+Helpful, detailed answer:
 """
 
 def get_prompt():

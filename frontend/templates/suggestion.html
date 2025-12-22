@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Research Paper Suggestion</h2>
+
+<form method="POST">
+    <input type="text" name="query" placeholder="Enter research query" required>
+
+    <h4>Select Domains:</h4>
+    <label><input type="checkbox" name="domains" value="medical"> Medical</label>
+    <label><input type="checkbox" name="domains" value="psychology"> Psychology</label>
+    <label><input type="checkbox" name="domains" value="artificial_intelligence"> Artificial Intelligence</label>
+    <label><input type="checkbox" name="domains" value="business"> Business</label>
+    <label><input type="checkbox" name="domains" value="automobile"> Automobile</label>
+    <label><input type="checkbox" name="domains" value="climate"> Climate</label>
+    <label><input type="checkbox" name="domains" value="cyber_security"> Cyber Security</label>
+
+    <input type="number" name="top_n" value="3" min="1" max="20">
+
+    <button type="submit">Search</button>
+</form>
+
+{% if results %}
+<h3>Results</h3>
+<ul>
+{% for item in results %}
+    <li>
+        <b>{{ item.paper }}</b> | Score: {{ item.score }}
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}

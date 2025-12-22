@@ -1,0 +1,178 @@
+:root {
+    --background: #f6f6f6;
+    --surface: #ffffff;
+    --surface2: #f1f1f1;
+    --text: #000000;
+    --primary: #4FC3F7;
+    --primary-hover: #29ABE2;
+    --accent: #14C8FF;
+    --border: rgba(0,0,0,0.15);
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+nav {
+    background: var(--surface);
+    padding: 18px 30px;
+    display: flex;
+    height: 100px;
+    gap: 50px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 40px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.25s;
+    color: var(--text);
+}
+
+nav a:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.nav-logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    image-rendering: smooth;
+}
+
+/* Container */
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Headings */
+h1, h2 {
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Form */
+form {
+    background: var(--surface);
+    padding: 26px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Inputs + Fixes */
+textarea,
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    resize: vertical;
+    overflow: auto;
+    color: var(--text);
+}
+
+/* Prevent overlap text issue */
+textarea {
+    min-height: 140px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Inputs focus */
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+}
+
+/* Button */
+button {
+    background: var(--primary);
+    padding: 14px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+/* Result card */
+.result-card {
+    background: var(--surface);
+    padding: 18px;
+    margin: 18px 0;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* Result title */
+.result-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 22px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+

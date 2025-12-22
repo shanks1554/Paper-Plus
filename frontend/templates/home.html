@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Friend.AI </h1>
+<p>Your AI-powered research assistant.</p>
+
+<div class="result-card">
+    <h3>Improve Papers</h3>
+    <p>Analyze and rewrite scientific text for clarity.</p>
+    <a href="/improver"><button>Open</button></a>
+</div>
+
+<div class="result-card">
+    <h3>Suggest Papers</h3>
+    <p>Find the most relevant research papers for your topic.</p>
+    <a href="/suggestion"><button>Open</button></a>
+</div>
+
+<div class="result-card">
+    <h3>Research Q&A</h3>
+    <p>Ask scientific questions and get evidence-based answers.</p>
+    <a href="/qa"><button>Open</button></a>
+</div>
+
+{% endblock %}

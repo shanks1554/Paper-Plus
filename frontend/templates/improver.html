@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Research Paper Improver</h2>
+
+<form method="POST">
+    <textarea name="text" placeholder="Paste research text..." required></textarea>
+
+    <label>
+        <input type="checkbox" name="rewrite" value="true">
+        Rewrite text
+    </label>
+
+    <button type="submit">Analyze</button>
+</form>
+
+{% if analysis %}
+<div class="result-card">
+    <h3>Analysis</h3>
+    <p class="result-text">{{ analysis }}</p>
+</div>
+{% endif %}
+
+{% if improved %}
+<div class="result-card">
+    <h3>Improved Text</h3>
+    <p class="result-text">{{ improved }}</p>
+</div>
+{% endif %}
+
+{% endblock %}
